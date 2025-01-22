@@ -115,7 +115,7 @@
   }
   
   .modal-content {
-    background-color: var(--sec-color);
+    background-color: var(--quat-color);
     overflow: auto;
     margin: 15% auto;
     padding: 20px;
