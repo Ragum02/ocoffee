@@ -1,0 +1,28 @@
+/* ERROR */
+.error-container {
+    background-color: var(--sec-color);
+    width: 100vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .error-image {
+    width: 50vh;
+  }
+  
+  .error-text {
+    color: var(--quat-color);
+    text-shadow: 2px 2px 2px var(--color-dark);
+    font-size: calc(var(--gutter) * 4);
+  }
+
+
+/* Responsive 768*/
+
+@media (min-width: 768px) {}
+
+/* Responsive 1024*/
+
+@media (min-width: 1024px) {}

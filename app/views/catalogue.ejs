@@ -1,0 +1,46 @@
+<%- include('partials/header', {style: "catalog"}) %>
+
+<main class="main main-catalog">
+    <section class="catalog-hero">
+        <div class="catalog-hero-titlebox">
+        <h2 class="catalog-title">
+            Notre catalogue
+        </h2>
+    </div>
+        </section>
+
+
+    <section class="catalog-products">
+        <form action="/catalogue/category" method="get">
+        <select name="category" id="catalog-category" onchange="this.form.submit()">
+            <option value="Tous">Choix du gout</option>
+            <option value="Tous">Tous</option>
+            <% caract.forEach((car) => { %>
+                <option value="<%= car.main_caract %>"><%= car.main_caract %></option>
+            <% }) %>
+        </select>
+    </form>
+        <div class="catalog-product-cardsbox">
+           <% firstThird.forEach((coffee) => { %>
+            <figure class="catalog-product-card">
+                <strong><%= coffee.name %></strong>
+                <img class="catalog-product-card-image" src="/assets/coffees/<%= coffee.reference %>.png">
+                <figcaption class="card-figcaption"><a href="/catalogue/produit/<%= coffee.reference %>">Découvrir</a></figcaption>
+            </figure>
+           <% }) %>
+           <% theOther.forEach((coffee) => { %>
+            <figure class="catalog-product-card--hidden">
+                <strong><%= coffee.name %></strong>
+                <img class="catalog-product-card-image" src="/assets/coffees/<%= coffee.reference %>.png">
+                <figcaption class="card-figcaption"><a href="/catalogue/produit/<%= coffee.reference %>">Découvrir</a></figcaption>
+            </figure>
+           <% }) %>
+            </div>
+            <button class="catalog-showall">Voir tout</button>
+        </div>
+    </section>
+</main>
+<script src="/script/catalog.js"></script>
+</body>
+
+</html>

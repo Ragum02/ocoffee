@@ -1,0 +1,44 @@
+<%- include('partials/header', { style : "index"}) %>
+
+<main class="main main-homepage">
+<section class="homepage-introduction">
+    <div class="homepage-introduction-box">
+    <div class="homepage-introduction-textbox">
+        <h2 class="homepage-introduction-title">
+            Qui sommes-nous ?
+        </h2>
+        <p class="homepage-introduction-text">
+            Jean et Jacques Pepper, 
+            deux frères passionnés par le café, 
+            sont les fondateurs de notre boutique. 
+            Avec une expertise approfondie et un amour profond pour cette délicieuse boisson, 
+            ils ont créé un espace où le café est célébré comme une expérience raffinée et inspirante.
+        </p>
+    </div>
+    <div class="homepage-introduction-imagebox">
+        <img class="homepage-introduction-image" src="/assets/about.jpg" alt="">
+    </div>
+</div>
+</section>
+<section class="homepage-newproducts">
+    <h2 class="homepage-newproducts-title">
+        Nouveautés
+    </h2>
+    <div class="carousel-container">
+        <button class="carousel-button left" aria-label="Défiler vers la gauche">←</button>
+        <div class="homepage-newproducts-cardbox coffee-cardbox">
+            <% lastAdd.forEach(item => { %>
+                <div class="newproduct-card">
+                    <img src="/assets/coffees/<%= item.reference %>.png" alt="">
+                    <a class="newproduct-link" href="catalogue/produit/<%= item.reference %>">Découvrir</a>
+                </div>
+            <% }) %>
+        </div>
+        <button class="carousel-button right" aria-label="Défiler vers la droite">→</button>
+    </div>
+</section>
+</main>
+<script src="/script/homepage.js"></script>
+</body>
+</html>
+

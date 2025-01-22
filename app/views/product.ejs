@@ -1,0 +1,16 @@
+<%- include('partials/header', {style: "product"}) %>
+
+<section class="product-hero">
+    <img src="/assets/coffees/<%= selectedProduct.reference %>.png" alt="">
+</section>
+
+<section class="product-box">
+    <div class="product-container">
+        <span class="product-date"><%= selectedProduct.disponibility %></span>
+        <h3 class="product-name"><%= selectedProduct.name %></h3>
+        <em class="product-origine">Origine: <%= selectedProduct.origine %></em>
+        <p class="product-description"><%= selectedProduct.description %></p>
+        <span class="product-price">Prix: <%= selectedProduct.price_kg %> €/kg</span>
+        <a class="product-link" href="/catalogue">Catalogue</a>
+    </div>
+</section>

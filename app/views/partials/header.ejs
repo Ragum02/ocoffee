@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/assets/logo.svg" type="image/x-icon">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/<%= style %>.css">
+    <% if (currentPage === 'boutique') { %>
+      <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""/>
+  <% } %>
+    <script src="/script/nav.js" defer></script>
+    <title>O'Coffee</title>
+</head>
+<body>
+<header>
+    <div id="main-title-box">
+
+      <a href="/"><img id="logo" src="/assets/logo.svg" alt="Logo de la boutique"></a>
+        <h1 id="main-title"><a href="/">oCoffee</a></h1>
+
+    </div>
+    <nav class="nav top-nav">
+        <button class="burger-menu" aria-label="Ouvrir le menu">☰</button>
+        <ul class="navlinks-list navlinks-top" aria-label="Navigation Principale">
+          <li><a aria-label="<%= currentPage === '/' ? 'Vous êtes sur là page d\accueil' : 'Aller à la page d\'accueil' %>" class="navlink navlinknav-top link-homepage" href="/">Accueil</a></li>
+          <li><a aria-label="<%= currentPage === 'catalogue' ? 'Vous êtes sur la page du catalogue' : 'Aller sur la page du catalogue' %>" class="navlink navlinknav-top link-catalog" href="/catalogue">Catalogue</a></li>
+          <li><a aria-label="<%= currentPage === 'boutique' ? 'Vous êtes sur là page des informations de la boutique' : 'Aller à la page d\informations de là boutique' %>" class="navlink navlinknav-top link-shop" href="/boutique">Boutique</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    

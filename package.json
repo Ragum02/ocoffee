@@ -1,0 +1,34 @@
+{
+  "name": "s09-projet-ocoffee-init-ragum02",
+  "version": "1.0.0",
+  "description": "## Information du projet",
+  "main": "index.js",
+  "type": "module",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "dev": "node --watch index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ragum02/ocoffee"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/O-clock-Skadi/S09-Projet-OCoffee-Init-Ragum02/issues"
+  },
+  "homepage": "https://github.com/Ragum02/ocoffee#readme",
+  "dependencies": {
+    "@emailjs/browser": "^4.4.1",
+    "dotenv": "^16.4.7",
+    "ejs": "^3.1.10",
+    "express": "^4.21.2",
+    "express-session": "^1.18.1",
+    "multer": "^1.4.5-lts.1",
+    "node": "^22.13.0",
+    "pg": "^8.13.1"
+  }
+}

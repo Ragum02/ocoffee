@@ -1,0 +1,41 @@
+<%- include('partials/header', { style: "admin"}) %>
+
+  <main class="form-page">
+    <h1>Ajouter un produit</h1>
+    <form action="/admin" method="post" enctype="multipart/form-data"> <%# Ne pas oublier le enctype pour multer ... j'ai chercher longtemps ! %>
+
+      <label for="name">Nom du produit</label>
+      <input type="text" name="name" id="addproduct_name" required />
+
+      <label for="name">Origine du produit</label>
+      <input type="text" name="origine" id="addproduct_origine" required />
+
+      <label for="price_kg">Prix au kg :</label>
+      <input type="number" name="price_kg" id="addproduct_pricekg" step="0.01" required />
+
+      <label for="reference">Numero de reference</label>
+      <input type="number" name="reference" id="addproduct_reference" required />
+
+      <label for="product_image">Image du produit</label>
+      <input type="file" name="image" id="addproduct_image" accept="image/*" required />
+
+      <label for="category">Caracteristique: </label>
+      <select name="main_caract" id="catalog-category">
+        <% caract.forEach((car) => { %>
+            <option value="<%= car.main_caract %>"><%= car.main_caract %></option>
+        <% }) %>
+    </select>
+
+    <label for="description">Description du produit: </label>
+    <textarea name="description" id="addproduct_descripton"></textarea>
+
+    <div>
+    <input type="radio" id="addproduct_dispo" name="disponibility" value="En stock" checked />
+    <label for="disponibility">En Stock</label>
+    <input type="radio" id="addproduct_notdispo" name="disponibility" value="Rupture de stock"/>
+    <label for="disponibility">Rupture de stock</label>
+    </div>
+
+      <button type="submit">Envoyer</button>
+    </form>
+  </main>
